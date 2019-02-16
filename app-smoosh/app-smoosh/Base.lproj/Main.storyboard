@@ -120,7 +120,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="4mX-iq-PtD">
                                 <rect key="frame" x="20" y="233" width="374" height="208"/>
                                 <subviews>
-                                    <button opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfU-j0-uBh" customClass="BorderButton" customModule="app_smoosh" customModuleProvider="target">
+                                    <button opaque="NO" alpha="0.40000000596046448" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfU-j0-uBh" customClass="BorderButton" customModule="app_smoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -130,8 +130,11 @@
                                         <state key="normal" title="Men">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="mensClicked:" destination="bKd-5l-M39" eventType="touchUpInside" id="9z9-nc-mfY"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2O-jy-3Rb" customClass="BorderButton" customModule="app_smoosh" customModuleProvider="target">
+                                    <button opaque="NO" alpha="0.40000000596046448" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2O-jy-3Rb" customClass="BorderButton" customModule="app_smoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="79" width="374" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -141,8 +144,11 @@
                                         <state key="normal" title="Wemen">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="wemensClicked:" destination="bKd-5l-M39" eventType="touchUpInside" id="uph-yq-5Ty"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGG-ad-zfq" customClass="BorderButton" customModule="app_smoosh" customModuleProvider="target">
+                                    <button opaque="NO" alpha="0.40000000596046448" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGG-ad-zfq" customClass="BorderButton" customModule="app_smoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="158" width="374" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -152,10 +158,13 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="coedClicked:" destination="bKd-5l-M39" eventType="touchUpInside" id="P9G-Sf-tkV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbd-zZ-MPY" customClass="BorderButton" customModule="app_smoosh" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.40000000596046448" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbd-zZ-MPY" customClass="BorderButton" customModule="app_smoosh" customModuleProvider="target">
                                 <rect key="frame" x="20" y="666" width="374" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -204,6 +213,10 @@
                         <viewLayoutGuide key="safeArea" id="PJn-d3-ljB"/>
                     </view>
                     <connections>
+                        <outlet property="coedBtn" destination="oGG-ad-zfq" id="R0H-UI-Dnh"/>
+                        <outlet property="mensBtn" destination="IfU-j0-uBh" id="luN-k7-eYe"/>
+                        <outlet property="nxtBtn" destination="fbd-zZ-MPY" id="nxr-RM-Wco"/>
+                        <outlet property="wemensBtn" destination="A2O-jy-3Rb" id="rBY-6d-FWf"/>
                         <segue destination="r8d-Pi-ooN" kind="show" identifier="skillVCSeg" id="OcR-sC-seu"/>
                     </connections>
                 </viewController>

@@ -8,7 +8,7 @@
  - [SWIFT 4](https://swift.org/documentation/)
 
 
-This is my very first iOS application built with Swift 4. I built this application in hope of learning watching some tutorials. I has nothing to do with the functionalities.  I just did it in hope of testing out constrains and autolayout. 
+This is my very first iOS application built with Swift 4. I built this application in hope of learning watching some tutorials. It has nothing to do with the functionalities.  I just did it in hope of testing out constrains and autolayout. 
 I would really appricate any suggestions, feedback, PRs and Issues.
 
 
